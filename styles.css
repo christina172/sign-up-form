@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+body {
+    background-color: black;
+
+}
+
+.container {
+    display:flex;
+    width: 80vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.left {
+    width: 38%;
+    height: 100vh;
+    background-image: url(shifaz-abdul-hakkim-NZTsrLSgNv0-unsplash.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.logo {
+    background-color: rgba(44, 44, 44, 0.7);
+    height: 15%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 21vh;
+}
+
+.logo h1 {
+    color: white;
+    font-family: "Amatic SC", sans-serif;
+    font-size: min(14vh,5rem);
+}
+
+.logo img {
+    height: 90%;
+    width: auto;
+}
+
+.credit {
+    color: white;
+    font-size:0.7rem;
+    position: absolute;
+    bottom: 2vh;
+    width: 100%;
+}
+
+.credit p{
+    text-align: center;
+}
+
+.credit a {
+    color: white;
+}
+
+.right {
+    width: 62%;
+    height: 100vh;
+    background-color: white;
+}
