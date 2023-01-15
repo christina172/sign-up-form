@@ -11,7 +11,8 @@ body {
 
 .container {
     display:flex;
-    width: 80vw;
+    align-items: stretch;
+    width: 80%;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -47,7 +48,7 @@ body {
 
 .credit {
     color: white;
-    font-size:0.7rem;
+    font-size: min(10vh, 0.75rem);
     position: absolute;
     bottom: 2vh;
     width: 100%;
@@ -62,7 +63,129 @@ body {
 }
 
 .right {
-    width: 62%;
-    height: 100vh;
-    background-color: white;
+    width:62%;
+    /* height: 100vh; */
+    background-color: rgb(255, 255, 245);
+    position: relative;
 }
+
+.header, .body, .footer {
+    padding: 20px 40px;
+    box-sizing:border-box;
+}
+
+.header {
+    height: 36vh;
+    font-weight: bold;
+    padding-top:min(100px, 10vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+h2 {
+    margin-bottom: min(3vh,1.4rem);
+}
+
+.header span {
+    font-style: italic;
+}
+
+.body {
+    height:34%;
+    border: 0.2px solid rgb(235, 235, 235);
+    background-color: rgb(252,252,252);
+    box-shadow: 0 3px 5px rgb(163, 163, 163);
+}
+
+.input {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    gap: min(3vh, 1.4rem);
+}
+
+.input div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    font-size: min(0.8rem, 2.5vh);
+    margin-bottom: 0.3rem;
+}
+
+input {
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 6px;
+    font-size: min(6vh, 1rem);
+    padding: 2px 5px;
+    box-sizing: border-box;
+    outline:none;
+}
+
+input:hover {
+    background-color: rgb(255, 255, 245);
+    border: 1px solid yellow;
+}
+
+input:focus {
+    border: 1px solid yellow;
+    box-shadow: 1px 2.5px 4px rgb(163, 163, 163);
+    background-color: rgb(255, 255, 245);
+}
+
+h2, .header p {
+    font-size: min(3vh, 1.4rem);
+}
+
+.footer {
+    height: 30%;
+}
+
+button {
+    padding: 10px 42px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(4, 94, 168);
+    box-shadow: 1px 3px 3px rgb(163, 163, 163);
+    color: white;
+    font-size: 0.8rem;
+    font-weight:bold;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: rgb(10, 133, 233);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(3, 52, 92);
+}
+
+.footer p {
+    font-weight: bold;
+}
+
+.footer span {
+    color: rgb(4, 94, 168);
+}
+
+.error, .error:focus, .error:hover {
+    border: 1px solid red;
+    background-color: rgb(255, 234, 234);
+}
+
+input#psw {
+    position:relative;
+}
+
+.error +span::before {
+    position: absolute;
+    content: "*Passwords do not match";
+    font-size: 0.7rem;
+    color: red;
+
+}
+
